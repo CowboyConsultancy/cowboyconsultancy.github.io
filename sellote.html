@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Sellote - Soundboard App</title>
     <style>
+        @font-face {
+            font-family: 'Basteleur-Moonlight';
+            src: url('Basteleur-Moonlight.woff2') format('woff2'),
+                 url('Basteleur-Moonlight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
         :root {
             --primary: #224f3e;
             --secondary: #2d6751;
@@ -13,7 +22,7 @@
         }
         
         body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: 'Basteleur-Moonlight', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--primary);
@@ -45,22 +54,26 @@
             max-width: 300px;
             border-radius: 12px;
             margin: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-button {
+            max-width: 300px;
+            margin: 1rem;
         }
 
-        .download-button {
+        .email-button {
             display: inline-block;
             background-color: var(--accent);
             color: var(--primary);
             padding: 1rem 2rem;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            font-family: 'Basteleur-Moonlight', system-ui, -apple-system, sans-serif;
             margin: 1rem;
             transition: transform 0.2s;
         }
 
-        .download-button:hover {
+        .email-button:hover {
             transform: scale(1.05);
         }
     </style>
@@ -69,7 +82,12 @@
     <header class="header">
         <img src="sellote-icn-dark.png" alt="El Sellote Icon" class="app-icon" />
         <h1>El Sellote</h1>
-        <p>El soundboard más mítico de las Islas Canarias</p>
+        <p>El soundboard más mítico de las Islas Canarias, ahora en tus dispositivos de Apple.</p>
+        <div>
+            <a href="https://apps.apple.com/es/app/el-sellote/id6738029040" target="_blank" rel="noopener noreferrer">
+                <img src="Download_on_the_App_Store_Badge_ES_RGB_blk_100217.svg" alt="Download on the App Store" class="download-button">
+            </a>
+        </div>
     </header>
 
     <main class="container">
@@ -77,11 +95,9 @@
             <p>El Sellote es una aplicación para iOS que te permite reproducir y compartir los momentos más memorables del famoso video que conquistó las Islas Canarias.</p>
             <img src="sellote-screenshot.png" alt="Screenshot de El Sellote" class="screenshot" />
             <div>
-                <button class="download-button" onclick="location.href='mailto:elsellotedeios@gmail.com';">Contacto</button>
+                <button class="email-button" onclick="location.href='mailto:elsellotedeios@gmail.com';">Contacto</button>
             </div>
-<!--            <div>-->
-<!--                <a href="#" class="download-button">Descargar en la App Store</a>-->
-<!--            </div>-->
+            <h6>Font: Basteleur by Keussel. Distributed by velvetyne.fr.</h6>
         </section>
     </main>
 </body>
